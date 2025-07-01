@@ -1,4 +1,6 @@
-abstract class PolygonShape(val vertices: List<Point>) : Movable, CalcuableArea {
+abstract class PolygonShape(
+    private val vertices: List<Point>
+) : Movable, CalcuableArea {
     abstract override fun getArea()
 
     override fun move(deltaX: Double, deltaY: Double) {
