@@ -1,2 +1,2 @@
-abstract class PolygonShape() {
+abstract class PolygonShape() : Movable, CalcuableArea {
 }

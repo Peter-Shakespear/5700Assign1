@@ -1,2 +1,3 @@
 interface CalcuableArea {
+    fun getArea()
 }

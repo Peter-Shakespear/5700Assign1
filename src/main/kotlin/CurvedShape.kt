@@ -1,2 +1,3 @@
-class CurvedShape {
+abstract class CurvedShape() : Movable, CalcuableArea {
+    
 }

@@ -1,2 +1,3 @@
 interface Movable {
+    fun move()
 }
