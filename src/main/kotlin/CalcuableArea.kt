@@ -1,3 +1,3 @@
 interface CalcuableArea {
-    fun getArea()
+    fun getArea(): Double
 }
