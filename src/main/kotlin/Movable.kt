@@ -1,3 +1,3 @@
 interface Movable {
-    fun move()
+    fun move(deltaX: Double, deltaY: Double)
 }
