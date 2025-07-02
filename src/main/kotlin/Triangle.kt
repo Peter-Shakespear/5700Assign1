@@ -4,6 +4,13 @@ class Triangle(
 
     init {
         require(vertices.size == 3) { "Triangle must have exactly 3 vertices" }
+        val p1 = vertices[0]
+        val p2 = vertices[1]
+        val p3 = vertices[2]
+        val determinant = p1.getX() * (p2.getY() - p3.getY()) +
+                p2.getX() * (p3.getY() - p1.getY()) +
+                p3.getX() * (p1.getY() - p2.getY())
+        require(kotlin.math.abs(determinant) > 1e-10) { "Triangle vertices cannot be collinear" }
     }
 
     override fun getArea(): Double {
@@ -12,8 +19,6 @@ class Triangle(
         val p2 = triangleVertices[1]
         val p3 = triangleVertices[2]
 
-        // Using the shoelace formula for triangle area
-        // Note: You'll still need getters for Point's x,y coordinates
         return 0.5 * kotlin.math.abs(
             p1.getX() * (p2.getY() - p3.getY()) +
                     p2.getX() * (p3.getY() - p1.getY()) +

@@ -10,4 +10,8 @@ class Point(
         x += deltaX
         y += deltaY
     }
+
+    fun clone(): Point {
+        return Point(x, y)
+    }
 }

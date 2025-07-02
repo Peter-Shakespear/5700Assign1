@@ -9,7 +9,6 @@ class Rectangle(
     override fun getArea(): Double {
         val rectangleVertices = getVertices()
 
-        // Using the shoelace formula for any quadrilateral
         var area = 0.0
         val n = rectangleVertices.size
 

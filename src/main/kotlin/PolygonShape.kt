@@ -1,8 +1,8 @@
 abstract class PolygonShape(
-    private val vertices: List<Point>
+    private var vertices: List<Point>
 ) : Movable, CalcuableArea {
 
-    protected fun getVertices(): List<Point> = vertices
+    fun getVertices(): List<Point> = vertices
 
     abstract override fun getArea(): Double
 
