@@ -4,13 +4,6 @@ class Rectangle(
     vertices: List<Point>
 ) : PolygonShape(vertices) {
 
-    private fun calculateDistance(p1: Point, p2: Point): Double {
-        return kotlin.math.sqrt(
-            (p2.getX() - p1.getX()).pow(2.0) +
-                    (p2.getY() - p1.getY()).pow(2.0)
-        )
-    }
-
     init {
         require(vertices.size == 4) { "Rectangle must have exactly 4 vertices" }
 

@@ -295,4 +295,14 @@ class CircleTest {
 
         assertEquals(PI * radius * radius, circle.getArea(), 0.0000001)
     }
+
+    @Test
+    fun testConstructorWithEqualNegativeRadii() {
+        val center = Point(0.0, 0.0)
+
+        val exception = assertThrows<IllegalArgumentException> {
+            Circle(center, -3.0, -3.0)
+        }
+        assertEquals("Circle radii must be positive", exception.message)
+    }
 }
