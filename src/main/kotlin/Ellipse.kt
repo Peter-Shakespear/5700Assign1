@@ -7,8 +7,4 @@ class Ellipse(
     init {
         require(radiusX > 0 && radiusY > 0) { "Ellipse radii must be positive" }
     }
-
-    override fun getArea(): Double {
-        return Math.PI * getRadiusX() * getRadiusY()
-    }
 }

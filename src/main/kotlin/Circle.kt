@@ -8,9 +8,4 @@ class Circle(
         require(radiusX == radiusY) { "Circle must have equal X and Y radii" }
         require(radiusX > 0 && radiusY > 0) { "Circle radii must be positive" }
     }
-
-    override fun getArea(): Double {
-        val area = Math.PI * getRadiusX() * getRadiusY()
-        return area
-    }
 }

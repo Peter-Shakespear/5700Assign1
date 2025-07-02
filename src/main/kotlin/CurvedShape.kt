@@ -3,7 +3,11 @@ abstract class CurvedShape(
     private var radiusX: Double, 
     private var radiusY: Double
 ) : Movable, CalcuableArea {
-    abstract override fun getArea(): Double
+
+    override fun getArea(): Double {
+        val area = Math.PI * getRadiusX() * getRadiusY()
+        return area
+    }
 
     fun getRadiusX(): Double = radiusX
     fun getRadiusY(): Double = radiusY
